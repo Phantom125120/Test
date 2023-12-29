@@ -1,8 +1,27 @@
 #sky{
     /*background-color: #0e0ba8 */
-    background-color: rgb(24, 24, 185,0.9)
-
+    background-color: rgb(24, 24, 185,0.9);
+    width:100%;
+    height:20vh;
+    
 }
 
+#middle{
+    background-color: #c896df;
+    width:100%;
+    height:40vh;
+}
+
+
+#island{
+    background-color: rgb(93, 71, 71);
+    width:100%;
+    height:10vh;
+}
+#sea{
+    background-color: rgba(35, 64, 196, 0.961);
+    width: 100%;
+    height: 30vh;
+}
 /*Sky is dark blue , middle is 
 pink with trees , sea is slightly lighter blue than the sky "*/
