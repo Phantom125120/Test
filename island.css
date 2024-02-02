@@ -1,27 +1,133 @@
-#sky{
-    /*background-color: #0e0ba8 */
-    background-color: rgb(24, 24, 185,0.9);
-    width:100%;
-    height:20vh;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh; /* Ensure the body takes up the full viewport height */
+}
+
+
+
+.sky {
+    background-color: rgba(24, 24, 185, 0.9);
+    width: 100%;
+    height: 20vh; /* 20% of the viewport height */
+    
+    position: relative;
+
+}
+
+.middle {
+    background-color: #c896df;
+    width: 100%;
+    height: 40vh; /* 40% of the viewport height */
+    position: relative;
+}
+
+.island {
+    background-color: rgb(93, 71, 71);
+    width: 100%;
+    height: 10vh; /* 10% of the viewport height */
+}
+
+.sea {
+    background-color: rgba(35, 64, 196, 0.961);
+    width: 100%;
+    height: 30vh; /* 30% of the viewport height */
+}
+
+#moon {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    animation: spin 60s ease-in-out infinite; 
+}
+
+.star {
+    max-width: 100%;
+    max-height: 25%;
+    width: auto;
+    height:auto;
+    display: inline-block;
+    margin-left: 10px; /* Add a margin value as needed */
+    
+   
+}
+.sky img:nth-of-type(2){
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right: 100px;
+  
+}
+
+
+
+
+.tree-container {
+    width: 100%;
+    height: 40vh;
+    text-align: center;
+    position: relative;
+    background-color: aliceblue;
+    overflow:hidden;
+}
+
+
+#tree {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    animation: swing 10s ease-in-out infinite; 
+    /*animation: grow 30s ease-in-out infinite; */
     
 }
 
-#middle{
-    background-color: #c896df;
-    width:100%;
-    height:40vh;
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
+@keyframes grow {
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale:0.9;
+    }
+    100%{
+        scale:1;
+    }
+}
 
-#island{
-    background-color: rgb(93, 71, 71);
-    width:100%;
-    height:10vh;
-}
-#sea{
-    background-color: rgba(35, 64, 196, 0.961);
-    width: 100%;
-    height: 30vh;
-}
-/*Sky is dark blue , middle is 
-pink with trees , sea is slightly lighter blue than the sky "*/
+/*@keyframes swing {
+    0% {
+        transform: rotate(0deg) translateX(-50%);
+    }
+    25% {
+        transform: rotate(10deg) translateX(-50%);
+    }
+    50% {
+        transform: rotate(0deg) translateX(-50%);
+    }
+    75% {
+        transform: rotate(-10deg) translateX(-50%);
+    }
+    100% {
+        transform: rotate(0deg) translateX(-50%);
+    }
+}*/
